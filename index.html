@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leader-Board</title>
+    <style>
+            
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500&display=swap');
+        /* common styles */
+        body{
+            font-family: 'Poppins', sans-serif;
+            background-color: #E5E5E5;
+        }
+        .container{
+            background-color: white;
+            width: 870px;
+            padding: 30px;
+            margin-top: 21px;
+            border-radius: 10px;
+        }
+        main{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        /* top players style */
+        .section-title{
+            color: #562eff;
+            font-size: 24px;
+            margin-top: 3px;
+        }
+        .players{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-row-gap: 30px;
+        }
+        .player{
+            display: flex;
+            align-items: center;
+        }
+        .players img{
+            height: 56px;
+            width: 56px;
+        }
+        .player-name{
+            margin-left: 16px;
+            font-size: 18px;
+        }
+        hr{
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border: 1px solid #D1D1D1;
+        }
+        /* top blog styles */
+        
+        .blogs{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-row-gap: 26px;
+        }
+
+        .blog{
+            display: flex;
+        }
+        .blog .thumbnail img{
+            Width : 224px;
+           height : 127px
+        }
+        .blog-info{
+            margin-left: 16px;
+        }
+        .blog-title{
+            font-size: 20px;
+        }
+        .blog-author{
+            color: #9F9F9F;
+            font-size: 16px;
+        }
+        .blog-author a{
+            text-decoration: none;
+        }
+        /* courses styles */
+        .courses{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-column-gap: 24px;
+        }
+        .course-info{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .course .course-banner img{
+            width: 266px;
+            height: 141px;
+        }
+        .fa-star{
+            font-size: 12px;
+        }
+        .fa-star.filled{
+            color: #ffc014;
+        }
+        .fa-star.empty{
+            color: #858072;
+        }
+        .course-duration{
+            background-color: #f3aeed;
+            color: #590052;
+            border-radius: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        .course-author{
+            color: red;
+        }
+
+        /* Media Queries */
+        @media only screen and (max-width:688px) {
+            .container{
+                width: 100%;
+            }
+            .players, .blogs, .courses{
+                grid-template-columns: repeat(1,1fr);
+            }
+            .player, .blog{
+                flex-direction: column;
+            }
+            
+        }
+        @media only screen and (min-width:688px) and (max-width:992px){
+
+        }
+
+    </style> 
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/878d4e690e.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- Header start -->
+    <header>
+
+    </header>
+    <!-- Header end -->
+    <main>
+        <!-- top players and top blogs -->
+        <section class="container">
+
+            <div class="top-players">
+                <h2 class="section-title">Top Players</h2>
+                <div class="players">
+                    <div class="player">
+                        <img src="images/players/player-1.png" alt="">
+                        <h3 class="player-name" >John Smith</h3>
+                    </div>
+                    <div class="player">
+                        <img src="images/players/player-2.png" alt="">
+                        <h3 class="player-name">Pro Rasel</h3>
+                    </div>
+                    <div class="player">
+                        <img src="images/players/player-3.png" alt="">
+                        <h3 class="player-name">Abu Sufian</h3>
+                    </div>
+                    <div class="player">
+                        <img src="images/players/player-4.png" alt="">
+                        <h3 class="player-name">Shajedul Karim</h3>
+                    </div>
+                    <div class="player">
+                        <img src="images/players/player-5.png" alt="">
+                        <h3 class="player-name">TMaruf Ahmed</h3>
+                    </div>
+                    <div class="player">
+                        <img src="images/players/player-6.png" alt="">
+                        <h3 class="player-name">Mujahid</h3>
+                    </div>
+            </div>
+            <hr> 
+            <div class="top-blogs">
+                <h2 class="section-title">Top Blogs</h2>
+                <div class="blogs">
+                    <article class="blog">
+                        <div class="thumbnail">
+                            <img src="images/blogs/blog-1.png" alt="">
+                        </div>
+                        <div class="blog-info">
+                            <h3 class="blog-title">13 of My Favorite UI/UX Goodies</h3>
+                            <p class="blog-author">By <a href="">Danny Sapio</a></p>
+                        </div>
+                    </article>
+                    <article class="blog">
+                        <div class="thumbnail">
+                            <img src="images/blogs/blog-2.png" alt="">
+                        </div>
+                        <div class="blog-info">
+                            <h3 class="blog-title">UI cheat sheet: 
+                                list vs grids</h3>
+                            <p class="blog-author">By <a href="">Tess Gadd</a></p>
+                        </div>
+                    </article>
+                    <article class="blog"> 
+                        <div class="thumbnail">
+                            <img src="images/blogs/blog-3.png" alt="">
+                        </div>
+                        <div class="blog-info">
+                            <h3 class="blog-title">7 typography tips 
+                                for interface design</h3>
+                            <p class="blog-author">By <a href="">Jeremiah Lam</a></p>
+                        </div>
+                    </article>
+                    <article class="blog">
+                        <div class="thumbnail">
+                            <img src="images/blogs/blog-4.png" alt="">
+                        </div>
+                        <div class="blog-info">
+                            <h3 class="blog-title">Your logo is 
+                                copied</h3>
+                            <p class="blog-author">By <a href="">Ferdinand Vogler</a></p>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+        <!-- Latest Courses -->
+        <section class="container">
+            <h2 class="section-title">Latest Course</h2>
+            <div class="courses">
+                <div class="course">
+                    <div class="course-banner">
+                        <img src="images/courses/course-1.png" alt="">
+                    </div>
+                    <div class="course-detail">
+                        <h3 class="course-title">
+                            React - The Complete Guide 2020
+                        </h3>
+                        <p class="course-author">
+                            Reed Krakoff.
+                        </p>
+                        <div class="course-info">
+                            <div class="ratings">
+                                <i class="fa-solid fa-star filled "></i>
+                                <i class="fa-solid fa-star filled "></i>
+                                <i class="fa-solid fa-star filled "></i>
+                                <i class="fa-solid fa-star filled "></i>
+                                <i class="fa-solid fa-star empty"></i>
+                            </div>
+                            <p>4.5</p>
+                            <div class="course-duration">
+                                <i class="fa-regular fa-clock"></i>
+                                01:30hr
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course">
+                    <div class="course-banner">
+                        <img src="images/courses/course-2.png" alt="">
+                    </div>
+                    <div class="course-detail">
+                        <h3 class="course-title">
+                            Powerpoint 2020 Master Powerpoint Course
+                        </h3>
+                        <p class="course-author">
+                            Walter Scott
+                        </p>
+                        <div class="course-info">
+                            <div class="ratings">
+                                <i class="fa-solid fa-star filled "></i>
+                                <i class="fa-solid fa-star filled "></i>
+                                <i class="fa-solid fa-star filled "></i>
+                                <i class="fa-solid fa-star filled "></i>
+                                <i class="fa-solid fa-star empty"></i>
+                            </div>
+                            <p>4.3</p>
+                            <div class="course-duration">
+                                <i class="fa-regular fa-clock"></i>
+                                01:20hr
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course">
+                    <div class="course-banner">
+                        <img src="images/courses/course-3.png" alt="">
+                    </div>
+                    <div class="course-detail">
+                        <h3 class="course-title">
+                            The Complete JavaScript Course 2020 </h3>
+                        <p class="course-author">
+                            Reed Krakoff.
+                        </p>
+                        <div class="course-info">
+                            <div class="ratings">
+                                <i class="fa-solid fa-star filled "></i>
+                                <i class="fa-solid fa-star filled "></i>
+                                <i class="fa-solid fa-star filled "></i>
+                                <i class="fa-solid fa-star filled "></i>
+                                <i class="fa-solid fa-star empty"></i>
+                            </div>
+                            <p>4.5</p>
+                            <div class="course-duration">
+                                <i class="fa-regular fa-clock"></i>
+                                01:30hr
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+  </body>
+</html>
